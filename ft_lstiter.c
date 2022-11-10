@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:52:08 by avast             #+#    #+#             */
-/*   Updated: 2022/11/09 18:02:34 by avast            ###   ########.fr       */
+/*   Created: 2022/11/10 12:41:39 by avast             #+#    #+#             */
+/*   Updated: 2022/11/10 13:10:28 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (*s)
+	t_list	*cur;
+
+	if (lst == 0)
+		return ;
+	cur = lst;
+	while (cur)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		(*f)(cur->content);
+		cur = cur->next;
 	}
 }

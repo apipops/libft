@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:57:19 by avast             #+#    #+#             */
-/*   Updated: 2022/11/09 13:09:40 by avast            ###   ########.fr       */
+/*   Updated: 2022/11/10 19:15:38 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	src_len = ft_strlen(src);
-	dst_len = ft_strlen((const char *)dst);
 	if (size == 0)
 		return (src_len);
+	dst_len = ft_strlen((const char *)dst);
 	if (size < dst_len)
 		return (src_len + size);
 	else

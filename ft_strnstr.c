@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:38:55 by avast             #+#    #+#             */
-/*   Updated: 2022/11/08 17:02:08 by avast            ###   ########.fr       */
+/*   Updated: 2022/11/10 18:02:44 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!(*little) || len == 0)
+	if (len == 0 && *little == 0)
+		return ((char *)big);
+	if (len == 0)
+		return (0);
+	if (!(*little))
 		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)

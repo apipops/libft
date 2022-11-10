@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:39:45 by avast             #+#    #+#             */
-/*   Updated: 2022/11/09 17:20:40 by avast            ###   ########.fr       */
+/*   Updated: 2022/11/10 14:48:20 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 
 	size = number_size(n);
 	nbr = n;
-	nbr_str = calloc(size + 1, sizeof(char));
+	nbr_str = ft_calloc(size + 1, sizeof(char));
 	if (!nbr_str)
 		return (0);
 	nbr_str[size] = '\0';
