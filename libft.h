@@ -6,12 +6,16 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 11:54:35 by avast             #+#    #+#             */
-/*   Updated: 2022/12/07 18:39:15 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/07 19:51:36 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include <stddef.h>
 # include <stdlib.h>

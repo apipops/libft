@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:39:16 by avast             #+#    #+#             */
-/*   Updated: 2022/12/07 18:38:26 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/07 19:50:22 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*fill_buffer(int fd, char *buff)
 		return (0);
 	tmp[BUFFER_SIZE] = '\0';
 	a = BUFFER_SIZE;
-	while (a == BUFFER_SIZE && !ft_strchr(buff, '\n'))
+	while (a == BUFFER_SIZE && !ft_strchr_gnl(buff, '\n'))
 	{
 		a = read(fd, tmp, BUFFER_SIZE);
 		if (a == -1)
@@ -50,7 +50,7 @@ char	*extract_line(char *buff)
 		len++;
 	if (buff[len] == '\n')
 		len++;
-	str = ft_substr(buff, 0, len);
+	str = ft_substr_gnl(buff, 0, len);
 	if (!str)
 	{
 		free (buff);
@@ -69,7 +69,7 @@ char	*update_buffer(char *buff)
 		start++;
 	if (buff[start] == '\n')
 		start++;
-	new_buff = ft_substr(buff, start, ft_strlen(buff) - start);
+	new_buff = ft_substr_gnl(buff, start, ft_strlen(buff) - start);
 	if (!new_buff)
 		return (0);
 	free (buff);

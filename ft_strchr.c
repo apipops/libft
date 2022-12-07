@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:48:59 by avast             #+#    #+#             */
-/*   Updated: 2022/11/10 17:35:34 by avast            ###   ########.fr       */
+/*   Updated: 2022/11/14 09:59:11 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (s[i] == (unsigned char)c)
 		return ((char *)s + i);
-	return (NULL);
+	return (0);
 }

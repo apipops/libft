@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:51:51 by avast             #+#    #+#             */
-/*   Updated: 2022/12/07 18:37:37 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/07 19:52:27 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strchr_gnl(char *s, int c)
 	return (0);
 }
 
-char	*ft_substr_gnl(char *s, unsigned int start, long int len)
+char	*ft_substr_gnl(char *s, unsigned long int start, unsigned long int len)
 {
 	char		*str;
 	long int	size;
