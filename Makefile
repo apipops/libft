@@ -6,7 +6,7 @@
 #    By: avast <avast@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 12:41:05 by avast             #+#    #+#              #
-#    Updated: 2022/11/10 19:29:22 by avast            ###   ########.fr        #
+#    Updated: 2022/12/07 18:39:35 by avast            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,11 @@ SRC = ft_isalpha.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c 
+	ft_putnbr_fd.c \
+	ft_printf.c \
+	ft_printf_utils.c \
+	get_next_line.c \
+	get_next_line_utils.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 11:54:35 by avast             #+#    #+#             */
-/*   Updated: 2022/11/10 17:18:37 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/07 18:39:15 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <syslog.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -66,5 +69,18 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_putchar_pf(char c, int *a);
+void	ft_putstr_pf(char *s, int *a);
+void	ft_putnbr_pf(long int nbr, int *a);
+void	ft_puthexa(unsigned long long int nbr, char *base, int *a);
+void	ft_putad_pf(unsigned long long int p, int *a);
+void	call_utils(char c, int *a, va_list ap);
+int		ft_printf(const char *format, ...);
+char	*ft_substr_gnl(char *s, unsigned int start, long int len);
+int		ft_strchr_gnl(char *s, int c);
+char	*fill_buffer(int fd, char *buff);
+char	*extract_line(char *buff);
+char	*update_buffer(char *buff);
+char	*get_next_line(int fd);
 
 #endif
