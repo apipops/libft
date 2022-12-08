@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:39:16 by avast             #+#    #+#             */
-/*   Updated: 2022/12/07 19:50:22 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/08 15:18:50 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*fill_buffer(int fd, char *buff)
 		}
 		tmp[a] = '\0';
 		if (a != 0)
-			buff = ft_strjoin(buff, tmp);
+			buff = ft_strjoin_gnl(buff, tmp);
 		if (!buff)
 			break ;
 	}

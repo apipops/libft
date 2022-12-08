@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 11:54:35 by avast             #+#    #+#             */
-/*   Updated: 2022/12/07 19:51:36 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/08 15:01:16 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 100
 # endif
 
 # include <stddef.h>
@@ -80,7 +80,8 @@ void	ft_puthexa(unsigned long long int nbr, char *base, int *a);
 void	ft_putad_pf(unsigned long long int p, int *a);
 void	call_utils(char c, int *a, va_list ap);
 int		ft_printf(const char *format, ...);
-char	*ft_substr_gnl(char *s, unsigned int start, long int len);
+char	*ft_substr_gnl(char *s, unsigned int start, unsigned int len);
+char	*ft_strjoin_gnl(char *s1, char *s2);
 int		ft_strchr_gnl(char *s, int c);
 char	*fill_buffer(int fd, char *buff);
 char	*extract_line(char *buff);

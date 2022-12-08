@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:51:51 by avast             #+#    #+#             */
-/*   Updated: 2022/12/07 19:52:27 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/08 15:07:17 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,36 @@ int	ft_strchr_gnl(char *s, int c)
 	return (0);
 }
 
-char	*ft_substr_gnl(char *s, unsigned long int start, unsigned long int len)
+char	*ft_strjoin_gnl(char *s1, char *s2)
+{
+	char		*s;
+	long int	size;
+	long int	i;
+	char		*tmp;
+
+	tmp = s1;
+	if (s1 == 0)
+		size = ft_strlen(s2);
+	else
+		size = ft_strlen(s1) + ft_strlen(s2);
+	s = (char *)ft_calloc(size + 1, sizeof(char));
+	if (!s)
+		return (0);
+	i = 0;
+	while (i < size)
+	{
+		while (s1 != 0 && *s1 != 0)
+			s[i++] = *s1++;
+		while (s2 != 0 && *s2 != 0)
+			s[i++] = *s2++;
+	}
+	s[i] = '\0';
+	if (tmp)
+		free(tmp);
+	return (s);
+}
+
+char	*ft_substr_gnl(char *s, unsigned int start, unsigned int len)
 {
 	char		*str;
 	long int	size;
