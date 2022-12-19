@@ -6,7 +6,7 @@
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:39:16 by avast             #+#    #+#             */
-/*   Updated: 2022/12/08 15:18:50 by avast            ###   ########.fr       */
+/*   Updated: 2022/12/19 17:00:48 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,12 +89,14 @@ char	*get_next_line(int fd)
 	if (buff[0] == '\0')
 	{
 		free (buff);
+		buff = 0;
 		return (0);
 	}
 	str = extract_line(buff);
 	if (!str)
 	{
 		free(buff);
+		buff = 0;
 		return (0);
 	}
 	buff = update_buffer(buff);
