@@ -6,7 +6,7 @@
 #    By: avast <avast@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 12:41:05 by avast             #+#    #+#              #
-#    Updated: 2022/12/07 18:39:35 by avast            ###   ########.fr        #
+#    Updated: 2022/12/12 10:57:03 by avast            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,22 +70,22 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME):$(OBJ)
-	ar rc $(NAME) $(OBJ) && ranlib $(NAME)
+	@ar rc $(NAME) $(OBJ) && ranlib $(NAME)
 
 $(OBJ):
-	gcc -Wall -Wextra -Werror -c $(SRC)
+	@gcc -Wall -Wextra -Werror -c $(SRC)
 
 $(BONUS):$(OBJ) $(OBJ_BONUS) 
-	ar rc $(NAME) $(OBJ) $(OBJ_BONUS) && ranlib $(NAME)
+	@ar rc $(NAME) $(OBJ) $(OBJ_BONUS) && ranlib $(NAME)
 
 $(OBJ_BONUS):
-	gcc -Wall -Wextra -Werror -c $(SRC_BONUS)
+	@gcc -Wall -Wextra -Werror -c $(SRC_BONUS)
 
 clean:
-	/bin/rm -f $(OBJ) $(OBJ_BONUS)
+	@/bin/rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean:clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
 
