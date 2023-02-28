@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avast <avast@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:01:39 by avast             #+#    #+#             */
-/*   Updated: 2022/11/10 12:28:09 by avast            ###   ########.fr       */
+/*   Created: 2023/02/17 16:48:52 by avast             #+#    #+#             */
+/*   Updated: 2023/02/17 16:49:07 by avast            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_strstr(const char *to_find, const char *big)
 {
-	t_list	*cur;
+	size_t	i;
 
-	if (*lst == 0)
-	{
-		*lst = new;
-		return ;
-	}
-	cur = *lst;
-	while (cur->next)
-		cur = cur->next;
-	cur->next = new;
+	i = 0;
+	while (to_find[i] && big[i] && to_find[i] == big[i])
+		i++;
+	if (!to_find[i])
+		return (1);
+	return (0);
 }
